@@ -1,4 +1,4 @@
-# Chat App using React, Firebase & Google Auth
+# Chat App using React, Firebase, Tailwind & Google Auth
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
