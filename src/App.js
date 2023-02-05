@@ -19,8 +19,8 @@ function App() {
         <section className={style.sectionContainer}>
             {/*Nav Bar Component*/}
             {<NavBar/>}
-            {/*{Chat Components}*/}
-            {<Chat/>}
+            {/*{Chat Component when user logged in}*/}
+            {user ? <Chat /> : null}
         </section>
     </div>);
 }
