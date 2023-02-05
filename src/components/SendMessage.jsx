@@ -15,17 +15,20 @@ const SendMessage = ({}) => {
         e.preventDefault()
         if (input === '') {
             alert('Please enter a valid message')
-            const {uid, displayName} = auth.currentUser
-            await addDoc(collection(db, 'messages'), {
-                text: input, name: displayName, uid, timestamp: serverTimestamp()
-            })
+            return
         }
+        const {uid, displayName} = auth.currentUser
+        await addDoc(collection(db, 'messages'), {
+            text: input, name: displayName, uid, timestamp: serverTimestamp()
+        })
+        setInput('')
+        scroll.current.scrollIntoView({behavior: 'smooth'})
     }
 
     return (<form onSubmit={sendMessage} className={style.form}>
         {/*Getting Input Value from form input*/}
         <input value={input} onChange={_ => setInput(_.target.value)} className={style.input} type={"text"}
-               placeholder={'Insert new message here'}/>
+               placeholder={'Enter new message here'}/>
         <button className={style.button}>Send</button>
     </form>);
 };
