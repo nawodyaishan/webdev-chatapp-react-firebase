@@ -12,7 +12,7 @@ const googleSignIn = () => {
 }
 
 const SignIn = () => {
-    return (<div className={style.wrapper}><GoogleButton onClick={googleSignIn()}/></div>)
+    return (<div className={style.wrapper}><GoogleButton onClick={() => googleSignIn()}/></div>)
 }
 
 export default SignIn;
