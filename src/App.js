@@ -17,7 +17,7 @@ function App() {
 
     return (<div className={style.appContainer}>
         <section className={style.sectionContainer}>
-            Nav Bar Component
+            {/*Nav Bar Component*/}
             {<NavBar/>}
             {/*{Chat Components}*/}
             {<Chat/>}
