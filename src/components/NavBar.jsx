@@ -11,7 +11,6 @@ const style = {
 
 function NavBar() {
     const [user] = useAuthState(auth)
-    console.log(user)
 
     return <div className={style.nav}>
         <h1 className={style.heading}>
